@@ -115,7 +115,7 @@
         <UpdateArticle
           class="card-box"
           v-if="homeData.postList === 'simple'"
-          :length="homeData.simplePostListLength || 5"
+          :length="homeData.simplePostListLength || 10"
           :moreArticle="
             $themeConfig.updateBar && $themeConfig.updateBar.moreArticle
           "
@@ -146,7 +146,7 @@
             $categoriesAndTags.categories.length
           "
           :categoriesData="$categoriesAndTags.categories"
-          :length="5"
+          :length="10"
         />
         <TagsBar
           v-if="$themeConfig.tag !== false && $categoriesAndTags.tags.length"
@@ -190,7 +190,7 @@ export default {
       mark: 0,
 
       total: 0, // 总长
-      perPage: 5, // 每页长
+      perPage: 10, // 每页长
       currentPage: 1// 当前页
     }
   },
